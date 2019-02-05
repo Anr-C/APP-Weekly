@@ -1,0 +1,11 @@
+<litepal>
+    <dbname value="weekly"/>
+    <!--<version value="1"/>-->
+    <!--版本升级-->
+    <version value="3"/>
+    <list>
+        <mapping class="com.lckiss.weekly.db.Type"/>
+        <mapping class="com.lckiss.weekly.db.Record"/>
+    </list>
+
+</litepal>

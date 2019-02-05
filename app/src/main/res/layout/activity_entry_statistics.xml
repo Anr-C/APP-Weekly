@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lckiss.weekly.EntryStatisticsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_flag_date" />
+
+    <LinearLayout
+        android:id="@+id/text_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/entry_cost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支出:-20"
+            android:textColor="@color/reduce_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/entry_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="收入:0.0"
+            android:textColor="@color/save"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/entry_fee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="结余:-20"
+            android:textColor="@color/cpb_default_color"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <include layout="@layout/no_data" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/comm_listview" android:visibility="gone" layout="@layout/comm_listview" />
+
+</LinearLayout>

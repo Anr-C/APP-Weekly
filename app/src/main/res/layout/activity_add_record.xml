@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_all"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="8dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/card_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tips_text"
+            style="@style/addHintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="支出"
+            android:textColor="@color/reduce_color" />
+
+        <EditText
+            android:id="@+id/money_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="输入金额"
+            android:lines="1"
+            android:focusable="false"
+            android:textColor="@color/reduce_color"
+            android:textColorHint="@color/second_text" />
+
+        <com.lckiss.weekly.widget.GridViewPager
+            android:id="@+id/gvp"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:gvpColumnMargin="5dp"
+            app:gvpMinCellHeight="68dp"
+            app:gvpMinCellWidth="88dp"
+            app:gvpRowMargin="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/description_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:hint="日常饮食"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/second_text" />
+
+            <!--focusable设置为false,使编辑框失去焦点,从而响应后台点击事件-->
+            <EditText
+                android:id="@+id/date_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5"
+                android:focusable="false"
+                android:maxLines="1"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/top"
+        android:background="@drawable/widget_item_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_bottom"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.lckiss.weekly.widget.CustomKeyboard
+            android:id="@+id/custom_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

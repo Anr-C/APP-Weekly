@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/slide_menu_shadow" />
+
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/line_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="7月概况"
+        android:textColor="@color/background"
+        android:textSize="28sp" />
+
+
+    <TextView
+        android:id="@+id/budget_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/month"
+        android:layout_margin="15dp"
+        android:text="本月预算 :"
+        android:textColor="@color/pic_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/budget_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/month"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp"
+        android:text="2000.0"
+        android:textColor="@color/reduce_color"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/slide_progress_bar"
+        style="@style/ProgressBar_Mini"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/budget_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:max="2000"
+        android:progress="300" />
+
+    <RelativeLayout
+        android:id="@+id/month_budget_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slide_progress_bar"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp">
+
+        <com.lckiss.weekly.widget.MyNumberTextView
+            android:id="@+id/month_budget_expend"
+            style="@style/addHintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已支出：300（80%）" />
+
+        <com.lckiss.weekly.widget.MyNumberTextView
+            android:id="@+id/month_budget_leave"
+            style="@style/addHintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="剩余:280" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/spend_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_budget_rl"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/timeline_divider" />
+
+        <RelativeLayout
+            android:id="@+id/month_save_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_keyboard_selector"
+            android:clickable="true"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="20.0dip"
+            android:paddingTop="20.0dip">
+
+            <ImageView
+                android:id="@+id/slide_save_icon_iv"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/slide_save_icon" />
+
+            <TextView
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/slide_save_icon_iv"
+                android:text="本月收入" />
+
+            <ImageView
+                android:id="@+id/expend_more_icon"
+                android:layout_width="5dp"
+                android:layout_height="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@mipmap/mz_btn_txt_more_borderless" />
+
+            <com.lckiss.weekly.widget.MyNumberTextView
+                android:id="@+id/month_save"
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/expend_more_icon"
+                android:text="+2938"
+                android:textColor="@color/plus_color" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/timeline_divider" />
+
+        <RelativeLayout
+            android:id="@+id/month_expend_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_keyboard_selector"
+            android:clickable="true"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="20.0dip"
+            android:paddingTop="20.0dip">
+
+            <ImageView
+                android:id="@+id/slide_expend_icon_iv"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/slide_expend_icon" />
+
+            <TextView
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/slide_expend_icon_iv"
+                android:text="本月支出" />
+
+            <ImageView
+                android:id="@+id/save_more_icon"
+                android:layout_width="5dp"
+                android:layout_height="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@mipmap/mz_btn_txt_more_borderless" />
+
+            <com.lckiss.weekly.widget.MyNumberTextView
+                android:id="@+id/month_expend"
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/save_more_icon"
+                android:text="-298"
+                android:textColor="@color/reduce_color" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/widget_item_divider" />
+
+        <com.lckiss.weekly.widget.MyNumberTextView
+            android:id="@+id/month_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:text="结余:-27.0"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/setting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_keyboard_selector"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="10.0dip">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_setting_blank"
+             />
+
+            <TextView
+                style="@style/addHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置"
+                android:textSize="22.0sp" />
+        </LinearLayout>
+
+</RelativeLayout>

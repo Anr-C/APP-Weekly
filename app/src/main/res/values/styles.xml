@@ -1,0 +1,107 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/line_color</item>
+        <item name="colorPrimaryDark">@color/line_color</item>
+        <item name="colorAccent">@color/line_color</item>
+        <!--<item name="android:windowAnimationStyle">@style/ActAnimation</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>
+    </style>
+
+    <!--menu items 间隔设置-->
+    <style name="CustomActionButtonStyle" parent="@android:style/Widget.Holo.ActionButton">
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+        <item name="android:minWidth">30dip</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <!-- 设置Menu菜单的背景色 -->
+        <item name="android:itemBackground">@android:color/white</item>
+        <!-- 设置Menu菜单的字体颜色 -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!-- 设置Menu窗口不覆盖Toolbar视图 -->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="ProjectText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="card" />
+
+    <style name="card.main_layout" parent="@style/card">
+        <item name="android:background">@drawable/card_selector</item>
+        <item name="android:layout_marginLeft">@dimen/card_main_layout_view_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/card_main_layout_view_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/card_main_layout_view_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/card_main_layout_view_margin_bottom</item>
+    </style>
+
+    <style name="card.shadow_image" parent="@style/card">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/card_shadow_height</item>
+        <item name="android:src">@drawable/card_shadow</item>
+    </style>
+
+    <style name="card.shadow_outer_layout" parent="@style/card">
+        <item name="android:layout_marginLeft">@dimen/card_shadow_view_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/card_shadow_view_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/card_shadow_view_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/card_shadow_view_margin_bottom</item>
+    </style>
+
+    <style name="DateText">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_mini</item>
+        <item name="android:minHeight">8.0dip</item>
+    </style>
+
+    <style name="addHintText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="itemTimeText">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="AnimDown" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_out</item>
+    </style>
+
+    <style name="SpinnerProjectText">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <!--<style name="ActAnimation" parent="@android:style/Animation.Activity">-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/push_left_in</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/push_left_out</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/push_right_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/push_right_out</item>-->
+    <!--</style>-->
+</resources>

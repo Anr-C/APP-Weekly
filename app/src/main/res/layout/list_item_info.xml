@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <com.lckiss.weekly.widget.MyNumberTextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15.0dip"
+        android:text="12.05"
+        android:textColor="@color/second_text"
+        android:textSize="14.0sp" />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="1.0dip"
+        android:layout_height="55.0dip"
+        android:layout_alignLeft="@+id/item_type_image"
+        android:layout_marginLeft="18.0dip"
+        android:alpha="0.6"
+        android:background="@drawable/timeline" />
+
+    <ImageView
+        android:id="@+id/item_type_image"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10.0dip"
+        android:layout_toRightOf="@id/time"
+        android:alpha="0.8" />
+
+    <TextView
+        android:id="@+id/comment_tv"
+        style="@style/ProjectText"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/item_type_image"
+        android:text="买了一个手机"
+        android:textSize="17.0sp" />
+
+    <com.lckiss.weekly.widget.MyNumberTextView
+        android:id="@+id/fee_tv"
+        style="@style/ProjectText"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15.0dip"
+        android:text="-1999"
+        android:textSize="18.0sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.6"
+        android:background="@drawable/timeline_divider" />
+</RelativeLayout>

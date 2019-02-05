@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lckiss.weekly.FlashActivity">
+
+    <ImageView
+        android:id="@+id/wall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/wall"
+        android:scaleType="center"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_marginTop="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/new_logo" />
+
+    <com.lckiss.weekly.widget.MyTextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/primary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly" />
+
+    <com.lckiss.weekly.widget.MyTextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/primary_text"
+        android:textSize="28sp"
+        android:text="简约干净的记账软件" />
+
+    <com.lckiss.weekly.widget.MyTextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:text="Life is colorful!" />
+
+    <com.lckiss.weekly.widget.MyTextView
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:gravity="bottom"
+        android:layout_margin="10dp"
+        android:textColor="@color/primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="你与生活,只相差一个记账本..." />
+
+    </LinearLayout>
+</RelativeLayout>

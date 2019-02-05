@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="记账设置">
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/input_budget"
+            android:key="@string/budget_key"
+            android:numeric="decimal"
+            android:summary="设置每月预算(每周预算为月预算／4)"
+            android:textColor="@color/primary_text"
+            android:title="@string/week_fee" />
+        <!--<widget.NoCheckedSwitchPreference-->
+            <!--android:focusable="false"-->
+            <!--android:key="notification"-->
+            <!--android:summary="@string/alarm_notification_summary"-->
+            <!--android:title="@string/alarm_notification" />-->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="安全设置">
+        <Preference
+            android:key="gesturePassword"
+            android:summary="@string/set_password_graph"
+            android:title="@string/set_password_graph">
+            <!--<intent-->
+                <!--android:targetClass=""-->
+                <!--android:targetPackage="" />-->
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="其他设置">
+        <Preference android:title="数据管理">
+            <intent
+                android:targetClass="com.lckiss.weekly.DataExportActivity"
+                android:targetPackage="com.lckiss.weekly" />
+        </Preference>
+        <Preference android:title="@string/category_edit">
+            <intent
+                android:targetClass="com.lckiss.weekly.CategoryEditActivity"
+                android:targetPackage="com.lckiss.weekly" />
+        </Preference>
+        <Preference
+            android:key="report"
+            android:summary="点击访问我的个人博客"
+            android:title="了解更多">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://lckiss.com/" />
+        </Preference>
+        <Preference
+            android:key="about"
+            android:title="关于"
+            android:summary="@string/version"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/lck_equalizer"
+        android:icon="@mipmap/ic_equalizer_white"
+        android:title="@string/equalizer"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/lck_subjec"
+        android:icon="@mipmap/ic_subject_white"
+        android:title="@string/subject"
+        app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/share"
+                android:orderInCategory="100"
+                android:title="分享"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/type_edit"
+                android:orderInCategory="100"
+                android:title="类别编辑"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/back_now"
+                android:orderInCategory="100"
+                android:title="回到今天"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/lck_setting"
+                android:orderInCategory="100"
+                android:title="设置"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/exit"
+                android:orderInCategory="100"
+                android:title="退出"
+                app:showAsAction="never" />
+
+</menu>

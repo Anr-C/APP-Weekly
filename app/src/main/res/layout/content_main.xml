@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.lckiss.weekly.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        style="@style/card.main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/previousWeek"
+                android:layout_width="33dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/back_btn_green"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/nextWeek"
+                android:layout_width="33dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/previousWeek"
+                android:background="@drawable/next_btn_red"
+                android:clickable="true" />
+
+            <com.lckiss.weekly.widget.MyNumberTextView
+                android:id="@+id/week_cost"
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="-199.90"
+                android:textColor="@color/reduce_color"
+                android:textSize="20sp" />
+
+            <com.lckiss.weekly.widget.MyNumberTextView
+                android:id="@+id/week_save"
+                style="@style/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/week_cost"
+                android:text="+1993.6"
+                android:textColor="@color/plus_color"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/timeline_divider" />
+
+        <view
+            android:id="@+id/line_view"
+            class="com.lckiss.weekly.widget.LineView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp" />
+
+        <ProgressBar
+            android:id="@+id/main_progress_bar"
+            style="@style/ProgressBar_Mini"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:progress="10" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/cloud"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/sett_iko_cloud" />
+
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cloud"
+            android:text="2017-06-29"
+            android:textColor="@color/pic_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cost_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/reduce_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/widget_item_divider" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/content_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:persistentDrawingCache="animation" />
+    </FrameLayout>
+</LinearLayout>
