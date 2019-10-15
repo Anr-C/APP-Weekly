@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -160,9 +159,9 @@ public class EntryStatisticsActivity extends AppCompatActivity implements Common
         isEmpty(costList);
         isEmpty(saveList);
         isEmpty(records);
-        records.addAll(findMonthRecordList(month));
-        costList.addAll(findMonthCostList(month));
-        saveList.addAll(findMonthSaveList(month));
+        records.addAll(findMonthRecordList(year,month));
+        costList.addAll(findMonthCostList(year,month));
+        saveList.addAll(findMonthSaveList(year,month));
         updateText(year+"年"+month+"月",MONTH);
     }
 

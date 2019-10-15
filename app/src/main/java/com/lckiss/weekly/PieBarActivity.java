@@ -5,7 +5,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -238,8 +237,8 @@ public class PieBarActivity extends AppCompatActivity implements CommonPopupWind
 
 
     public void getRecordByMonth() {
-        costList = findMonthCostList(month);
-        saveList = findMonthSaveList(month);
+        costList = findMonthCostList(year, month);
+        saveList = findMonthSaveList(year, month);
         flag_date.setText(year+"年"+month+"月");
         recordsByType();
     }

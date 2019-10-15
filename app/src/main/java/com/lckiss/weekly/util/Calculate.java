@@ -1,7 +1,5 @@
 package com.lckiss.weekly.util;
 
-import android.util.Log;
-
 import com.lckiss.weekly.db.Record;
 
 import java.math.BigDecimal;
@@ -128,8 +126,8 @@ public class Calculate {
      * @param month
      * @return
      */
-    public static Float getMonthCost(String month) {
-        List<Record> l=findMonthCostList(month);
+    public static Float getMonthCost(String year,String month) {
+        List<Record> l=findMonthCostList(year, month);
         return getRes(l,PLUS);
     }
 
@@ -138,8 +136,8 @@ public class Calculate {
      * @param month
      * @return
      */
-    public static Float getMonthSave(String month) {
-        List<Record> l=findMonthSaveList(month);
+    public static Float getMonthSave(String year,String month) {
+        List<Record> l=findMonthSaveList(year, month);
         return getRes(l,PLUS);
     }
 

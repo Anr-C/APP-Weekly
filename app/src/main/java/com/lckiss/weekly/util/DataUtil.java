@@ -99,6 +99,7 @@ public class DataUtil {
 
         return res;
     }
+
     /**
      * @param describe describe
      * @return type
@@ -209,33 +210,36 @@ public class DataUtil {
      * 起始位置为1,不是0
      * substr(字段,起始位置,长度)
      *
+     * @param year
      * @param month 月份
      * @return 该月的消费列表
      */
-    public static List<Record> findMonthRecordList(String month) {
-        return DataSupport.where("substr(date,6,2)=?", month).order("date desc").find(Record.class);
+    public static List<Record> findMonthRecordList(String year, String month) {
+        return DataSupport.where("substr(date,1,4)=? and substr(date,6,2)=?", year, month).order("date desc").find(Record.class);
     }
 
     /**
      * 起始位置为1,不是0
      * substr(字段,起始位置,长度)
      *
+     * @param year
      * @param month 月份
      * @return 该月的支出列表
      */
-    public static List<Record> findMonthCostList(String month) {
-        return DataSupport.where("substr(date,6,2)=? and classes=-1", month).order("date desc").find(Record.class);
+    public static List<Record> findMonthCostList(String year, String month) {
+        return DataSupport.where("substr(date,1,4)=? and substr(date,6,2)=? and classes=-1", year, month).order("date desc").find(Record.class);
     }
 
     /**
      * 起始位置为1,不是0
      * substr(字段,起始位置,长度)
      *
+     * @param year
      * @param month 月份
      * @return 该月的收入列表
      */
-    public static List<Record> findMonthSaveList(String month) {
-        return DataSupport.where("substr(date,6,2)=?  and classes=0", month).order("date desc").find(Record.class);
+    public static List<Record> findMonthSaveList(String year, String month) {
+        return DataSupport.where("substr(date,1,4)=? and substr(date,6,2)=? and classes=0", year, month).order("date desc").find(Record.class);
     }
 
     /**
@@ -336,6 +340,7 @@ public class DataUtil {
     public static void deleteAllRecord() {
         DataSupport.deleteAll(Record.class);
     }
+
     /**
      * 重置所有分类数据
      */

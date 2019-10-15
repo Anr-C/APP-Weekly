@@ -458,8 +458,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 //侧边栏列表
-                costListByMonth = findMonthCostList(currentMonth);
-                saveListByMonth = findMonthSaveList(currentMonth);
+                costListByMonth = findMonthCostList(currentYear, currentMonth);
+                saveListByMonth = findMonthSaveList(currentYear, currentMonth);
                 if (isThread) {
                     for (int i = 0; i < WEEKSUM; i++) {
                         recordList.get(i).clear();
